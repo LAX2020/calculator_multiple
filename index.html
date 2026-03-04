@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多功能计算器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="app">
+    <header class="topbar glass">
+      <a class="brand" href="#/home">
+        <span class="brand-mark">MC</span>
+        <span data-i18n="siteTitle">多功能计算器</span>
+      </a>
+      <div class="controls">
+        <label class="control">
+          <span data-i18n="themeLabel">主题</span>
+          <select id="theme-select" aria-label="Theme">
+            <option value="light" data-i18n="themeLight">普通</option>
+            <option value="dark" data-i18n="themeDark">暗黑</option>
+          </select>
+        </label>
+        <label class="control">
+          <span data-i18n="langLabel">语言</span>
+          <select id="lang-select" aria-label="Language">
+            <option value="zh" data-i18n="langZh">中文</option>
+            <option value="en" data-i18n="langEn">English</option>
+            <option value="ja" data-i18n="langJa">日本語</option>
+          </select>
+        </label>
+        <div class="background-switcher glass-soft">
+          <span class="bg-label" data-i18n="bgLabel">背景</span>
+          <div class="bg-tabs" role="tablist" aria-label="Background Presets">
+            <button type="button" class="bg-tab" data-bg="mica" data-i18n="bgMica">云母</button>
+            <button type="button" class="bg-tab" data-bg="aurora" data-i18n="bgAurora">极光</button>
+            <button type="button" class="bg-tab" data-bg="waves" data-i18n="bgWaves">波浪</button>
+            <button type="button" class="bg-tab" data-bg="geo" data-i18n="bgGeo">几何</button>
+            <button type="button" class="bg-tab" data-bg="paper" data-i18n="bgPaper">纸感</button>
+          </div>
+        </div>
+        <div class="clock glass-soft" aria-live="polite">
+          <div id="clock-time">00:00</div>
+          <div id="clock-date">2026/03/04</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page" id="app-view" aria-live="polite"></main>
+  </div>
+
+  <script src="assets/pages/home.js"></script>
+  <script src="assets/pages/bmi.js"></script>
+  <script src="assets/pages/unitbridge.js"></script>
+  <script src="assets/pages/fx.js"></script>
+  <script src="assets/app-shell.js"></script>
+</body>
+</html>
